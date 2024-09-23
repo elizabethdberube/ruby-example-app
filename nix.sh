@@ -1,0 +1,1 @@
+NIXPKGS_ALLOW_INSEUCRE=1 nix develop
