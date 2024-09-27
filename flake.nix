@@ -28,10 +28,15 @@
         devShell = with pkgs;
           mkShell {
             buildInputs = [
-              gems
-              ruby
+             # gems
+             ruby
               bundix
+              postgresql
+            
+            
             ];
+
+            
           };
       });
 }
