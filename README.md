@@ -1,24 +1,33 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## installation
 
-Things you may want to cover:
+1. ` sudo apt install rbenv `
 
-* Ruby version
+2. ` rbenv init `
 
-* System dependencies
+3. ` rbenv rbenv install 3.1.0 `
 
-* Configuration
+4. ` rbenv local 3.1.0 `
 
-* Database creation
+5. ` gem install bundler `
 
-* Database initialization
+6.  create .env
 
-* How to run the test suite
+7. ` bundle install `
 
-* Services (job queues, cache servers, search engines, etc.)
+8. ` docker-compose up `
 
-* Deployment instructions
+9.  navigate to http://0.0.0.0:3000/
 
-* ...
+
+## startup
+
+1. ` rbenv local 3.1.0 `
+
+2. ` docker-compose up `
+
+3.  navigate to http://0.0.0.0:3000/
+
+## nix
+Not currently set-up
