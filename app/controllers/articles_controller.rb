@@ -8,16 +8,14 @@ class ArticlesController < ApplicationController
     end
 
     def create
-      @article = Article.new(article_params)
-
-      if @article.save
-        redirect_to @article
-      else
-        respond_to do |format|
-            format.turbo_stream { render :new }
-            format.html { render :new }
-          end
-      end
+        @article = Article.new(article_params)
+    
+        if @article.save
+          redirect_to @article
+        else
+          render :new, status: :unprocessable_entity
+        end
+      
     end
 
     def show
