@@ -13,7 +13,10 @@ class ArticlesController < ApplicationController
       if @article.save
         redirect_to @article
       else
-        render 'new'
+        respond_to do |format|
+            format.turbo_stream { render :new }
+            format.html { render :new }
+          end
       end
     end
 
