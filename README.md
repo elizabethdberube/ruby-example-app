@@ -18,7 +18,11 @@
 
 8. ` docker-compose up `
 
-9.  navigate to http://0.0.0.0:3000/
+9. `docker run -d --network none -v /etc/hosts:/etc/hosts -v /var/run/docker.sock:/var/run/docker.sock costela/docker-etchosts`
+
+10. `bin/rails db:migrate`
+
+11.  navigate to http://0.0.0.0:3000/
 
 
 ## startup
@@ -27,7 +31,9 @@
 
 2. ` docker-compose up `
 
-3.  navigate to http://0.0.0.0:3000/
+3. ` docker run -d --network none -v /etc/hosts:/etc/hosts -v /var/run/docker.sock:/var/run/docker.sock costela/docker-etchosts`
+
+4.  navigate to http://0.0.0.0:3000/
 
 ## nix
 Not currently set-up
