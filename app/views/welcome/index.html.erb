@@ -1,144 +1,89 @@
-<style> 
-ul.cloud a[data-weight="1"] { --size: 1; }
-ul.cloud a[data-weight="2"] { --size: 2; }
-ul.cloud a[data-weight="3"] { --size: 3; }
-ul.cloud a[data-weight="4"] { --size: 4; }
-ul.cloud a[data-weight="5"] { --size: 5; }
-ul.cloud a[data-weight="6"] { --size: 6; }
-ul.cloud a[data-weight="7"] { --size: 7; }
-ul.cloud a[data-weight="8"] { --size: 8; }
-ul.cloud a[data-weight="9"] { --size: 9; }
 
 
-ul.cloud {
-    list-style: none;
-    padding-left: 0;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    line-height: 2.5rem;
-  }
-
-  ul.cloud a {
-  color: #a33;
-  display: block;
-  font-size: 1.5rem;
-  padding: 0.125rem 0.25rem;
-  text-decoration: none;
-  position: relative;
-  --size: 4;
-  font-size: calc(var(--size) * 0.25rem + 0.5rem);
-  opacity: calc((15 - (9 - var(--size))) / 15); 
-}
-
-
-ul.cloud[data-show-value] a::after {
-  content: " (" attr(data-weight) ")";
-  font-size: 1rem;
-}
-ul.cloud a[data-weight="1"] { color: #181; }
-ul.cloud a[data-weight="2"] { color: #33a; }
-ul.cloud a[data-weight="3"] { color: #c38; }
-ul.cloud a[data-weight="4"] { color: #33a; }
-ul.cloud a[data-weight="5"] { color: #c38; }
-ul.cloud a[data-weight="6"] { color: #181; }
-ul.cloud a[data-weight="7"] { color: #c38; }
-ul.cloud a[data-weight="8"] { color: #33a; }
-ul.cloud a[data-weight="9"] { color: #181; }
-
-
-ul.cloud a:focus {
-  outline: 1px dashed;
-} 
-
-ul.cloud a::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 50%;
-  width: 0;
-  height: 100%;
-  background: var(--color);
-  transform: translate(-50%, 0);
-  opacity: 0.15;
-  transition: width 0.25s;
-}
-
-ul.cloud a:focus::before,
-ul.cloud a:hover::before {
-  width: 100%;
-}
-
-@media (prefers-reduced-motion) {
-  ul.cloud * {
-    transition: none !important;
-  }
-}
-  </style>
 <ul class="cloud" role="navigation" aria-label="Webdev tag cloud">
-  <li><a data-weight="4" href="/tag/relate">Read</a></li>
-  <li><a data-weight="2" href="/tag/read">Relate</a></li>
-  <li><a data-weight="5" href="/tag/story">Story</a></li>
-  <li><a data-weight="8" href="/tag/observe">Observe</a></li>
-  <li><a data-weight="6" href="/tag/flexturnbox">Turn</a></li>
-  <li><a data-weight="4" href="/tag/write">Write</a></li>
-  <li><a data-weight="5" href="/tag/create">Create</a></li>
-  <li><a data-weight="6" href="/tag/change">Change</a></li>
-  <li><a data-weight="3" href="/tag/rest">Rest</a></li>
-  <li><a data-weight="9" href="/tag/share">Share</a></li>
-  <li><a data-weight="3" href="/tag/develop">Develop</a></li>
-  <li><a data-weight="7" href="/tag/dream">Dream</a></li>
-  <li><a data-weight="8" href="/tag/understand">Understand</a></li>
-  <li><a data-weight="1" href="/tag/move">Move</a></li>
-  <li><a data-weight="3" href="/tag/less">Less</a></li>
-  <li><a data-weight="4" href="/tag/relate">Relate</a></li>
-  <li><a data-weight="2" href="/tag/read">Reflect</a></li>
-  <li><a data-weight="5" href="/tag/story">Story</a></li>
-  <li><a data-weight="8" href="/tag/matter">Matter</a></li>
-  <li><a data-weight="6" href="/tag/history">History</a></li>
-  <li><a data-weight="4" href="/tag/write">Write</a></li>
-  <li><a data-weight="5" href="/tag/impact">Impact</a></li>
-  <li><a data-weight="6" href="/tag/change">Change</a></li>
-  <li><a data-weight="3" href="/tag/rest">Rest</a></li>
-  <li><a data-weight="9" href="/tag/free">Free</a></li>
-  <li><a data-weight="3" href="/tag/reflect">Reflect</a></li>
-  <li><a data-weight="7" href="/tag/respond">Respond</a></li>
-  <li><a data-weight="8" href="/tag/connect">Connect</a></li>
-  <li><a data-weight="1" href="/tag/give">Give</a></li>
-  <li><a data-weight="3" href="/tag/learn">Learn</a></li>
-  <li><a data-weight="3" href="/tag/live">Live</a></li>
-  <li><a data-weight="4" href="/tag/relate">Read</a></li>
-  <li><a data-weight="2" href="/tag/pause">Pause</a></li>
-  <li><a data-weight="5" href="/tag/story">Story</a></li>
-  <li><a data-weight="8" href="/tag/difference">Difference</a></li>
-  <li><a data-weight="6" href="/tag/develop">Develop</a></li>
-  <li><a data-weight="4" href="/tag/write">Write</a></li>
-  <li><a data-weight="5" href="/tag/time">Time</a></li>
-  <li><a data-weight="6" href="/tag/change">Change</a></li>
-  <li><a data-weight="3" href="/tag/peopple">People</a></li>
-  <li><a data-weight="9" href="/tag/world">World</a></li>
-  <li><a data-weight="3" href="/tag/inform">Inform</a></li>
-  <li><a data-weight="7" href="/tag/impact">Impact</a></li>
-  <li><a data-weight="8" href="/tag/reflect">Reflect</a></li>
-  <li><a data-weight="1" href="/tag/forget">Forget</a></li>
-  <li><a data-weight="3" href="/tag/remember">Remember</a></li>
-  <li><a data-weight="5" href="/tag/story">Story</a></li>
-  <li><a data-weight="8" href="/tag/difference">Imagine</a></li>
-  <li><a data-weight="6" href="/tag/flexbox">FlexBox</a></li>
-  <li><a data-weight="4" href="/tag/write">Write</a></li>
-  <li><a data-weight="5" href="/tag/art">Art</a></li>
-  <li><a data-weight="6" href="/tag/change">Change</a></li>
-  <li><a data-weight="3" href="/tag/rest">Rest</a></li>
-  <li><a data-weight="9" href="/tag/wonder">Wonder</a></li>
-  <li><a data-weight="3" href="/tag/explore">Explore</a></li>
-  <li><a data-weight="7" href="/tag/pen">Pen</a></li>
-  <li><a data-weight="8" href="/tag/connect">Connect</a></li>
-  <li><a data-weight="1" href="/tag/collect">Collect</a></li>
-  <li><a data-weight="3" href="/tag/think">Think</a></li>
+
+  <li><a data-weight="4" href="/welcome/tag" value="Read">Read</a></li>
+  <li><a data-weight="2" href="/welcome/tag" value="Relate">Relate</a></li>
+  <li><a data-weight="5" href="/welcome/tag" value="Story">Story</a></li>
+  <li><a data-weight="8" href="/welcome/tag" value="Observe">Observe</a></li>
+  <li><a data-weight="6" href="/welcome/tag" value="Turn">Turn</a></li>
+  <li><a data-weight="4" href="/welcome/tag" value="Write">Write</a></li>
+  <li><a data-weight="5" href="/welcome/tag" value="Create">Create</a></li>
+  <li><a data-weight="6" href="/welcome/tag" value="Change">Change</a></li>
+  <li><a data-weight="3" href="/welcome/tag" value="Rest">Rest</a></li>
+  <li><a data-weight="9" href="/welcome/tag" value="Share">Share</a></li>
+  <li><a data-weight="3" href="/welcome/tag" value="Develop">Develop</a></li>
+  <li><a data-weight="7" href="/welcome/tag" value="Dream">Dream</a></li>
+  <li><a data-weight="8" href="/welcome/tag" value="Understand">Understand</a></li>
+  <li><a data-weight="1" href="/welcome/tag" value="Move">Move</a></li>
+  <li><a data-weight="3" href="/welcome/tag" value="Less">Less</a></li>
+  <li><a data-weight="4" href="/welcome/tag" value="Relate">Relate</a></li>
+  <li><a data-weight="2" href="/welcome/tag" value="Reflect">Reflect</a></li>
+  <li><a data-weight="5" href="/welcome/tag" value="Story">Story</a></li>
+
+  <li><a data-weight="8" href="/welcome/tag" value="Matter">Matter</a></li>
+  <li><a data-weight="6" href="/welcome/tag" value="History">History</a></li>
+  <li><a data-weight="4" href="/welcome/tag" value="Write">Write</a></li>
+  <li><a data-weight="5" href="/welcome/tag" value="Impact">Impact</a></li>
+  <li><a data-weight="6" href="/welcome/tag" value="Change">Change</a></li>
+  <li><a data-weight="3" href="/welcome/tag" value="Rest">Rest</a></li>
+  <li><a data-weight="9" href="/welcome/tag" value="Free">Free</a></li>
+  <li><a data-weight="3" href="/welcome/tag" value="Reflect">Reflect</a></li>
+  <li><a data-weight="7" href="/welcome/tag" value="Respond">Respond</a></li>
+  <li><a data-weight="8" href="/welcome/tag" value="Connect">Connect</a></li>
+  <li><a data-weight="1" href="/welcome/tag" value="Give">Give</a></li>
+  <li><a data-weight="3" href="/welcome/tag" value="Learn">Learn</a></li>
+  <li><a data-weight="3" href="/welcome/tag" value="Live">Live</a></li>
+  <li><a data-weight="4" href="/welcome/tag" value="Read">Read</a></li>
+  <li><a data-weight="2" href="/welcome/tag" value="Pause">Pause</a></li>
+  <li><a data-weight="5" href="/welcome/tag" value="Story">Story</a></li>
+  <li><a data-weight="8" href="/welcome/tag" value="Difference">Difference</a></li>
+
+  <li><a data-weight="6" href="/welcome/tag" value="Develop">Develop</a></li>
+  <li><a data-weight="4" href="/welcome/tag" value="Write">Write</a></li>
+  <li><a data-weight="5" href="/welcome/tag" value="Time">Time</a></li>
+  <li><a data-weight="6" href="/welcome/tag" value="Change">Change</a></li>
+  <li><a data-weight="3" href="/welcome/tag" value="People">People</a></li>
+  <li><a data-weight="9" href="/welcome/tag" value="World">World</a></li>
+  <li><a data-weight="3" href="/welcome/tag" value="Inform">Inform</a></li>
+  <li><a data-weight="7" href="/welcome/tag" value="Impact">Impact</a></li>
+  <li><a data-weight="8" href="/welcome/tag" value="Reflect">Reflect</a></li>
+  <li><a data-weight="1" href="/welcome/tag" value="Forget">Forget</a></li>
+  <li><a data-weight="3" href="/welcome/tag" value="Remember">Remember</a></li>
+  <li><a data-weight="5" href="/welcome/tag" value="Story">Story</a></li>
+  <li><a data-weight="8" href="/welcome/tag" value="Imagine">Imagine</a></li>
+  <li><a data-weight="6" href="/welcome/tag" value="Love">Love</a></li>
+  <li><a data-weight="4" href="/welcome/tag" value="Write">Write</a></li>
+  <li><a data-weight="5" href="/welcome/tag" value="Art">Art</a></li>
+  <li><a data-weight="6" href="/welcome/tag" value="Change">Change</a></li>
+  <li><a data-weight="3" href="/welcome/tag" value="Rest">Rest</a></li>
+
+  <li><a data-weight="9" href="/welcome/tag" value="Wonder">Wonder</a></li>
+  <li><a data-weight="3" href="/welcome/tag" value="Explore">Explore</a></li>
+  <li><a data-weight="7" href="/welcome/tag" value="Pen">Pen</a></li>
+  <li><a data-weight="8" href="/welcome/tag" value="Connect">Connect</a></li>
+  <li><a data-weight="1" href="/welcome/tag" value="Collect">Collect</a></li>
+  <li><a data-weight="3" href="/welcome/tag" value="Think">Think</a></li>
+  <li><a data-weight="8" href="/welcome/tag" value="Defy">Defy</a></li>
+  <li><a data-weight="1" href="/welcome/tag" value="Comfort">Comfort</a></li>
+  <li><a data-weight="3" href="/welcome/tag" value="Travel">Travel</a></li>
+  <li><a data-weight="5" href="/welcome/tag" value="Journal">Journal</a></li>
+  <li><a data-weight="8" href="/welcome/tag" value="Quest">Quest</a></li>
+  <li><a data-weight="6" href="/welcome/tag" value="Intrigue">Intrigue</a></li>
+  <li><a data-weight="4" href="/welcome/tag" value="Suspense">Suspense</a></li>
+  <li><a data-weight="5" href="/welcome/tag" value="Kindness">Kindness</a></li>
+  <li><a data-weight="6" href="/welcome/tag" value="Defend">Defend</a></li>
+  <li><a data-weight="3" href="/welcome/tag" value="Paper">Paper</a></li>
+
+  <li><a data-weight="9" href="/welcome/tag" value="Reason">Reason</a></li>
+  <li><a data-weight="3" href="/welcome/tag" value="Explore">Explore</a></li>
+  <li><a data-weight="7" href="/welcome/tag" value="Pen">Pen</a></li>
+  <li><a data-weight="8" href="/welcome/tag" value="Ackonwledge">Ackonwledge</a></li>
+  <li><a data-weight="1" href="/welcome/tag" value="Collect">Collect</a></li>
+  <li><a data-weight="3" href="/welcome/tag" value="Think">Think</a></li>
 </ul>
 
-<%= link_to 'My Blog', controller: 'articles' %>
+<%= link_to 'My Blog', {controller: 'articles'}, :class=>"btn btn-primary" %>
 
 <%= link_to 'New article', new_article_path %>
 
