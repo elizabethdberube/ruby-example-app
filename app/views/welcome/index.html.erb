@@ -1,5 +1,5 @@
 
-
+<div class="jumbo">
 <ul class="cloud" role="navigation" aria-label="Webdev tag cloud">
 
   <li><a data-weight="4" href="/welcome/tag" value="Read">Read</a></li>
@@ -17,43 +17,43 @@
   <li><a data-weight="8" href="/welcome/tag" value="Understand">Understand</a></li>
   <li><a data-weight="1" href="/welcome/tag" value="Move">Move</a></li>
   <li><a data-weight="3" href="/welcome/tag" value="Less">Less</a></li>
-  <li><a data-weight="4" href="/welcome/tag" value="Relate">Relate</a></li>
+  <li><a data-weight="9" href="/welcome/tag" value="Relate">Relate</a></li>
   <li><a data-weight="2" href="/welcome/tag" value="Reflect">Reflect</a></li>
-  <li><a data-weight="5" href="/welcome/tag" value="Story">Story</a></li>
+  <li><a data-weight="7" href="/welcome/tag" value="Impact">Impact</a></li>
 
-  <li><a data-weight="8" href="/welcome/tag" value="Matter">Matter</a></li>
+  <li><a data-weight="1" href="/welcome/tag" value="Matter">Matter</a></li>
   <li><a data-weight="6" href="/welcome/tag" value="History">History</a></li>
-  <li><a data-weight="4" href="/welcome/tag" value="Write">Write</a></li>
+  <li><a data-weight="8" href="/welcome/tag" value="Write">Write</a></li>
   <li><a data-weight="5" href="/welcome/tag" value="Impact">Impact</a></li>
-  <li><a data-weight="6" href="/welcome/tag" value="Change">Change</a></li>
+  <li><a data-weight="6" href="/welcome/tag" value="Move">Move</a></li>
   <li><a data-weight="3" href="/welcome/tag" value="Rest">Rest</a></li>
   <li><a data-weight="9" href="/welcome/tag" value="Free">Free</a></li>
   <li><a data-weight="3" href="/welcome/tag" value="Reflect">Reflect</a></li>
   <li><a data-weight="7" href="/welcome/tag" value="Respond">Respond</a></li>
-  <li><a data-weight="8" href="/welcome/tag" value="Connect">Connect</a></li>
+  <li><a data-weight="4" href="/welcome/tag" value="Connect">Connect</a></li>
   <li><a data-weight="1" href="/welcome/tag" value="Give">Give</a></li>
   <li><a data-weight="3" href="/welcome/tag" value="Learn">Learn</a></li>
   <li><a data-weight="3" href="/welcome/tag" value="Live">Live</a></li>
   <li><a data-weight="4" href="/welcome/tag" value="Read">Read</a></li>
   <li><a data-weight="2" href="/welcome/tag" value="Pause">Pause</a></li>
   <li><a data-weight="5" href="/welcome/tag" value="Story">Story</a></li>
-  <li><a data-weight="8" href="/welcome/tag" value="Difference">Difference</a></li>
+  <li><a data-weight="7" href="/welcome/tag" value="Difference">Difference</a></li>
 
   <li><a data-weight="6" href="/welcome/tag" value="Develop">Develop</a></li>
   <li><a data-weight="4" href="/welcome/tag" value="Write">Write</a></li>
   <li><a data-weight="5" href="/welcome/tag" value="Time">Time</a></li>
-  <li><a data-weight="6" href="/welcome/tag" value="Change">Change</a></li>
+  <li><a data-weight="8" href="/welcome/tag" value="Defy">Defy</a></li>
   <li><a data-weight="3" href="/welcome/tag" value="People">People</a></li>
-  <li><a data-weight="9" href="/welcome/tag" value="World">World</a></li>
+  <li><a data-weight="7" href="/welcome/tag" value="World">World</a></li>
   <li><a data-weight="3" href="/welcome/tag" value="Inform">Inform</a></li>
-  <li><a data-weight="7" href="/welcome/tag" value="Impact">Impact</a></li>
-  <li><a data-weight="8" href="/welcome/tag" value="Reflect">Reflect</a></li>
+  <li><a data-weight="9" href="/welcome/tag" value="Impact">Impact</a></li>
+  <li><a data-weight="4" href="/welcome/tag" value="Reflect">Reflect</a></li>
   <li><a data-weight="1" href="/welcome/tag" value="Forget">Forget</a></li>
   <li><a data-weight="3" href="/welcome/tag" value="Remember">Remember</a></li>
-  <li><a data-weight="5" href="/welcome/tag" value="Story">Story</a></li>
+  <li><a data-weight="9" href="/welcome/tag" value="Pause">Pause</a></li>
   <li><a data-weight="8" href="/welcome/tag" value="Imagine">Imagine</a></li>
   <li><a data-weight="6" href="/welcome/tag" value="Love">Love</a></li>
-  <li><a data-weight="4" href="/welcome/tag" value="Write">Write</a></li>
+  <li><a data-weight="8" href="/welcome/tag" value="Give">Give</a></li>
   <li><a data-weight="5" href="/welcome/tag" value="Art">Art</a></li>
   <li><a data-weight="6" href="/welcome/tag" value="Change">Change</a></li>
   <li><a data-weight="3" href="/welcome/tag" value="Rest">Rest</a></li>
@@ -83,8 +83,18 @@
   <li><a data-weight="3" href="/welcome/tag" value="Think">Think</a></li>
 </ul>
 
-<%= link_to 'My Blog', {controller: 'articles'}, :class=>"btn btn-primary" %>
+</div>
+<div class="welcome_articles">
 
-<%= link_to 'New article', new_article_path %>
+<h1>Published Articles</h1>
+<hr>
+<ul>
+  <% @articles.each do |article| %>
+    <li>
+   <%= link_to article.title, article %>
+    </li>
+  <% end %>
+</ul>
 
+</div>
 

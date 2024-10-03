@@ -1,3 +1,78 @@
+html {
+    width: 100%;
+    height: 100%;
+    display: table;
+}
+
+body {
+    width: 100%;
+    display: table-cell;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+/* header */
+.jumbo {
+   
+    margin-bottom: 0px;
+    height: 300px;
+    width: 100%;
+
+}
+
+/* header */
+.welcome_articles {
+  padding-top: 10%;
+  padding-left: 10%;
+  padding-right: 10%;
+  color: #33a;
+
+}
+
+.warning{
+  padding-left: 20%;
+}
+
+/* navbar */
+.nav-link {
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    writing-mode: vertical-lr;
+    text-orientation: mixed;
+    padding-top: 120px;
+    margin-left: 30px;
+    font-size: 34px;
+    font-weight: bold;
+    font-family: 'roboto';
+    color: #ffffff;
+}
+
+/* navbar */
+.nav-bar {
+    display: flex;
+    flex-direction: row;
+    width: 5%;
+    height: 100vh;
+    background-color: #181;
+    color: #ffffff;
+    margin-right: 0;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+}
+
+
+
+/* tag cloud */
 ul.cloud a[data-weight="1"] { --size: 1; }
 ul.cloud a[data-weight="2"] { --size: 2; }
 ul.cloud a[data-weight="3"] { --size: 3; }
@@ -11,7 +86,8 @@ ul.cloud a[data-weight="9"] { --size: 9; }
 
 ul.cloud {
     list-style: none;
-    padding-left: 0;
+    padding-left: 10%;
+    padding-right: 10%;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -73,4 +149,53 @@ ul.cloud a:hover::before {
   ul.cloud * {
     transition: none !important;
   }
+}
+
+/* navbar */
+@media screen and (max-width: 912px) {
+    .nav-bar {
+        display: flex;
+        flex-direction: row;
+        width: 10%;
+        height: 110vh;
+        background-color: var(--gray-dark);
+        margin-right: 0;
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+
+    }
+}
+
+@media screen and (max-width: 912px) {
+
+    .nav-link {
+        text-align: left;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        writing-mode: vertical-lr;
+        text-orientation: mixed;
+        padding-top: 10px;
+        margin-left: 2px;
+        font-size: 24px;
+        font-weight: 600;
+        font-family: 'roboto';
+        color: var(--headerGreen);
+    }
+}
+
+/* header */
+@media screen and (max-width: 912px) {
+    .jumbo {
+        background-color: var(--headerGreen);
+        color: var(--light);
+        font-family: 'roboto';
+        margin-bottom: 0px;
+        height: 250px;
+        width: 100%;
+
+    }
 }
