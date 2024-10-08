@@ -22,7 +22,9 @@
 
 10. `bin/rails db:migrate`
 
-11.  navigate to http://0.0.0.0:3000/
+11. `bin/rails db:seed`
+
+12.  navigate to http://0.0.0.0:3000/
 
 
 ## startup

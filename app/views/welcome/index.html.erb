@@ -87,11 +87,12 @@
 <div class="welcome_articles">
 
 <h1>Published Articles</h1>
+<h5>(Login to read)</h5>
 <hr>
 <ul>
   <% @articles.each do |article| %>
     <li>
-   <%= link_to article.title, article %>
+   <%= article.title %> by <%= article.users_id %>
     </li>
   <% end %>
 </ul>
