@@ -92,8 +92,9 @@
 <ul>
   <% @articles.each do |article| %>
     <li>
-   <%= article.title %> by <%= article.users_id %>
+   <%= article.title %> by <%= article.user&.name %>
     </li>
+    <br>
   <% end %>
 </ul>
 

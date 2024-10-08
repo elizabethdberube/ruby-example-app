@@ -16,8 +16,8 @@ ActiveRecord::Schema[7.1].define(version: 2024_10_08_153652) do
     t.text "text"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.bigint "users_id"
-    t.index ["users_id"], name: "index_articles_on_users_id"
+    t.bigint "user_id"
+    t.index ["user_id"], name: "index_articles_on_user_id"
   end
 
   create_table "comments", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
@@ -40,6 +40,6 @@ ActiveRecord::Schema[7.1].define(version: 2024_10_08_153652) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
-  add_foreign_key "articles", "users", column: "users_id"
+  add_foreign_key "articles", "users"
   add_foreign_key "comments", "articles"
 end

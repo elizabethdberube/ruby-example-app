@@ -145,6 +145,19 @@ ul.cloud a:hover::before {
   width: 100%;
 }
 
+/* sign in */
+.log{
+margin-left: 10%;
+
+}
+.field{
+  padding-bottom: 1%;
+}
+
+.actions{
+  padding-bottom: 1%;
+}
+
 @media (prefers-reduced-motion) {
   ul.cloud * {
     transition: none !important;
