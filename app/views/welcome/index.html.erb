@@ -87,6 +87,24 @@
 <div class="welcome_articles">
 
 <h1>Published Articles</h1>
+<% if user_signed_in? %>
+
+
+
+
+<hr>
+<ul>
+  <% @articles.each do |article| %>
+    <li>
+     <%= link_to article.title,  article_path(article.id) %>
+    <p>Published: </p>
+      <p>By: <%= article.user&.name %></p>
+    </li>
+    <br>
+  <% end %>
+</ul>
+
+<% else %>
 <h5>(Login to read)</h5>
 <hr>
 <ul>
@@ -98,5 +116,6 @@
   <% end %>
 </ul>
 
+<% end %>
 </div>
 

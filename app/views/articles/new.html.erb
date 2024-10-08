@@ -1,3 +1,4 @@
+<div class="log">
 <h1>New Article</h1>
 
 <%= form_with model: @article do |form| %>
@@ -18,8 +19,9 @@
   </div>
 
   <div>
-    <%= form.submit %>
+    <%= form.submit "Submit", :class=>'btn btn-secondary'  %>
   </div>
 <% end %>
  
 <%= link_to 'Back', articles_path %>
+</div>

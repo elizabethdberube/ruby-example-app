@@ -1,16 +1,19 @@
-<h1>Welcome !</h1>
-<p><%= @user %></p>
+<div class="log">
+<h1>Welcome <%= @user %>!</h1>
+<hr>
+<br>
 
-<h1>Listing articles</h1>
+<h3 class="recent">Recent Listing articles</h3>
  
 <ul>
   <% @articles.each do |article| %>
     <li>
-   <%= link_to article.title, article %>
+
+    <%= link_to article.title,  article_path(article.id) %>
     </li>
   <% end %>
 </ul>
 
 
 <%= link_to 'New article', new_article_path %>
-<%= link_to '', '/users/sign_up'%>
+</div>

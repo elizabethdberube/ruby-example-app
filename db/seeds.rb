@@ -8,9 +8,9 @@
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
 
-User.create!(name: 'Lizeroni', email:'elizbaethdberube@gmail.com', password: "password" )
+User.create!(name: 'Lizeroni', email:'elizabethdberube@gmail.com', password: "password" )
 User.create!(name: 'Mando Smith', email:'mando@fake.com', password: "password" )
-User.create!(name: 'Susan Bell', email:'elibaethdberube@gmail.com', password: "password" )
+User.create!(name: 'Susan Bell', email:'elizabeth@gmail.com', password: "password" )
 
 
 Article.create!(title: "A great way to Read", text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In nisi libero, laoreet sed malesuada non, tincidunt ac ex. Nunc a ante sit amet lacus vehicula hendrerit. Suspendisse pretium feugiat massa, at accumsan enim dictum in. Suspendisse lectus nisl, fermentum sit amet dolor in, sagittis sagittis tortor.", user_id: 1)

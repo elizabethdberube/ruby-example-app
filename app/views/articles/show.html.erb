@@ -1,25 +1,32 @@
 
+<div class="log">
 <p>
-  <strong>Title:</strong>
+<h5>Title:</h5>
   <%= @article.title %>
 </p>
  
 <p>
-  <strong>Text:</strong>
+<h5>Text:</h5>
   <%= @article.text %>
 </p>
-<h2>Comments</h2>
+<h5>Comments</h5>
+<% if !@article.comments == nil %>
 <%= render @article.comments %>
+<% else %>
+<p> There are no comments for this article </p>
+
+<% end %>
  
-<h2>Add a comment:</h2>
+<h5>Add a comment:</h5>
 <%= render 'comments/form' %>
 
 <ul>
   <li><%= link_to "Edit", edit_article_path(@article) %></li>
-  <li><%= link_to "Destroy", article_path(@article), data: {
+  <li><%= link_to "Delete", article_path(@article), data: {
     turbo_method: :delete,
     turbo_confirm: "Are you sure?"
   } %></li>
 </ul>
 
 <%= link_to 'Back', articles_path %>
+</div>
