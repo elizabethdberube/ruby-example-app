@@ -2,6 +2,34 @@
 <h1>Welcome <%= @user %>!</h1>
 <hr>
 <br>
+<%= form_tag "/index", method: "GET" do %>
+  <%= label_tag :search_by_title %>
+  <%= text_field_tag :search_by_title, params[:search_by_title] %>
+  <%= label_tag :search_by_user_name %>
+  <%= text_field_tag :search_by_user_name, params[:search_by_user_name] %>
+  <%= label_tag :search_by_date %>
+  <%= text_field_tag :search_by_date, params[:search_by_date] %>
+  <%= submit_tag "Search" %>
+<% end %>
+
+<br>
+<% if @results %>
+<h3 class="recent">Search Results</h3>
+ 
+<ul>
+  <% @articles.each do |article| %>
+    <li>
+
+    <%= link_to article.title,  article_path(article.id) %>
+    </li>
+  <% end %>
+</ul>
+
+
+<%= link_to 'New article', new_article_path %>
+<hr>
+<br>
+<% end %>
 
 <h3 class="recent">Recent Listing articles</h3>
  
