@@ -2,13 +2,14 @@
 <h1 class="recent">Welcome <%= @user %>!</h1>
 <hr>
 <br>
-<%= form_tag "/index", method: "GET" do %>
+<%= form_tag "articles/", method: "GET" do %>
   <%= label_tag :search_by_title %>
+
   <%= text_field_tag :search_by_title, params[:search_by_title] %>
   <%= label_tag :search_by_user_name %>
   <%= text_field_tag :search_by_user_name, params[:search_by_user_name] %>
   <%= label_tag :search_by_date %>
-  <%= text_field_tag :search_by_date, params[:search_by_date] %>
+  <%= text_field_tag :search_by_date, params[:search_by_date],  :type=>'date' %>
   <%= submit_tag "Search", :class=>'btn btn-secondary' %>
 <% end %>
 
@@ -17,16 +18,14 @@
 <h3 class="recent">Search Results</h3>
  
 <ul>
-  <% @articles.each do |article| %>
+  <%= @results.each do |result| %>
     <li>
 
-    <%= link_to article.title,  article_path(article.id) %>
+     <%= link_to result.title,  article_path(result.id) %>
     </li>
   <% end %>
 </ul>
 
-
-<%= link_to 'New article', new_article_path %>
 <hr>
 <br>
 <% end %>
@@ -36,8 +35,7 @@
 <ul>
   <% @articles.each do |article| %>
     <li>
-
-    <%= link_to article.title,  article_path(article.id) %>
+<%= link_to article.title,  article_path(article.id) %>
     </li>
   <% end %>
 </ul>

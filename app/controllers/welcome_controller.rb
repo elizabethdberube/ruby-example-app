@@ -7,6 +7,7 @@ class WelcomeController < ApplicationController
   end
 
   def show
+    
     @article = Article.find(params[:id])
     # @article = Article.where(:users_id=> params[:users_id]) 
 
