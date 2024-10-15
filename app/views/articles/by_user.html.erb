@@ -1,0 +1,31 @@
+
+<div class="typewritter">
+<div>
+<%= image_tag('typewritter.jpg', draggable: "true", id: "type") %>
+<h1 class="user_articles"> Your Published Articles </h1>
+</div>
+<div class="user_articles">
+<h1 class="user_articles"> Your Published Articles </h1>
+</div>
+</div>
+
+
+<div class="welcome_articles">
+
+
+
+<ul>
+  <% @articles.each do |article| %>
+    <li>
+     <%= link_to article.title,  article_path(article.id) %>
+    <p>Published: <%= article.created_at.strftime("%m/%d/%Y") %> </p>
+      <p>By: <%= article.user&.name %></p>
+    </li>
+    <br>
+  <% end %>
+</ul>
+
+
+
+<%= link_to 'Back', articles_path %>
+</div>

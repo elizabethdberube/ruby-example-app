@@ -1,5 +1,5 @@
 <div class="log">
-<h1>Welcome <%= @user %>!</h1>
+<h1 class="recent">Welcome <%= @user %>!</h1>
 <hr>
 <br>
 <%= form_tag "/index", method: "GET" do %>
@@ -9,7 +9,7 @@
   <%= text_field_tag :search_by_user_name, params[:search_by_user_name] %>
   <%= label_tag :search_by_date %>
   <%= text_field_tag :search_by_date, params[:search_by_date] %>
-  <%= submit_tag "Search" %>
+  <%= submit_tag "Search", :class=>'btn btn-secondary' %>
 <% end %>
 
 <br>
@@ -31,7 +31,7 @@
 <br>
 <% end %>
 
-<h3 class="recent">Recent Listing articles</h3>
+<h3 class="recent">Recent articles</h3>
  
 <ul>
   <% @articles.each do |article| %>

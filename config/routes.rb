@@ -7,10 +7,16 @@ Rails.application.routes.draw do
     resources :articles
   end
 
-  resources :articles do
-    resources :comments
-  end
+  
+    resources :articles do
+
+      collection do 
+        get "by_user/:user_id", to: "by_user"
+     end
+    resources :comments 
    
+    end
+ 
   get 'welcome/index'
 
   get '/welcome/tag/:title', to: 'welcome#tag#show'

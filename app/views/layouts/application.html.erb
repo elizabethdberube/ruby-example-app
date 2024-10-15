@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Blog</title>
+    <title>Articles</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -32,7 +32,7 @@
          
           </li>
           <li class='nav-item'>
-           <%= link_to 'My Articles', new_article_path, :class=>"nav-link" %>
+           <%= link_to 'My Articles', '/articles/by_user/:user_id', :class=>"nav-link" %>
           </li>
           <li class='nav-item'>
           <%= link_to 'Main Page', welcome_index_path, :class=>"nav-link" %>
