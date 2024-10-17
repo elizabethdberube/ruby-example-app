@@ -13,7 +13,7 @@ User.create!(name: 'Mando Smith', email:'mando@fake.com', password: "password" )
 User.create!(name: 'Susan Bell', email:'elizabeth@gmail.com', password: "password" )
 
 
-Article.create!(title: "A great way to Read", text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In nisi libero, laoreet sed malesuada non, tincidunt ac ex. Nunc a ante sit amet lacus vehicula hendrerit. Suspendisse pretium feugiat massa, at accumsan enim dictum in. Suspendisse lectus nisl, fermentum sit amet dolor in, sagittis sagittis tortor.", user_id: 1)
+Article.create!(title: "A great way to read", text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In nisi libero, laoreet sed malesuada non, tincidunt ac ex. Nunc a ante sit amet lacus vehicula hendrerit. Suspendisse pretium feugiat massa, at accumsan enim dictum in. Suspendisse lectus nisl, fermentum sit amet dolor in, sagittis sagittis tortor.", user_id: 1)
 Article.create!(title: "Move across the world", text: "Suspendisse potenti. Duis varius, justo sed posuere egestas, odio justo egestas mi, vitae tincidunt quam enim sed odio. Vestibulum sit amet viverra nulla.",  user_id: 3)
 Article.create!(title: "Relate to others", text: "Sed egestas velit nisl, nec viverra est faucibus convallis. Aliquam et posuere nisl, ut malesuada mi. Sed ac neque et lorem aliquam imperdiet vitae a quam. Donec interdum enim et hendrerit mollis. Vestibulum laoreet varius turpis vel tempus.", user_id: 3)
 Article.create!(title: "Observe", text: "Proin pellentesque imperdiet imperdiet. Curabitur finibus, orci a ultrices dictum, leo nisi sodales tellus, vitae malesuada sapien massa eget lectus. Integer a lorem nisi.",  user_id: 3)

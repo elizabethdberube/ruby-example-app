@@ -3,25 +3,23 @@ class ArticlesController < ApplicationController
 
     def index
         @articles = Article.all
-        @user = current_user.name
-    
+        @username = current_user.name
+       
           if params[:search_by_title] && params[:search_by_title] != ""
 
-            # @results = @articles.where("title like ?", 
-            # "%# {params[:search_by_title]}%")
             @results = @articles.where('title LIKE ?', "%#{params[:search_by_title]}%")
-
+         
           end
           if params[:search_by_user_name] && params[:search_by_user_name] != ""
-
-            @user = User.where("name like ?", "%# {params[:search_by_user_name]}%")
-            @results = @articles.where(:user_id=> params[:user.id])
-
+       
+            @user = User.where("name like ?", "%#{params[:search_by_user_name]}%").first
+          
+             @results = @articles.where(user_id: @user.id)
+        
           end
          if params[:search_by_date] && params[:search_by_date] != ""
             parsed_date = Date.parse(params[:search_by_date])
-            @results = @articles.where("created_at = ?", parsed_date.beginning_of_day..parsed_date.end_of_day)
-            # @results = @articles.where("created_at like ?", "%# {params[:search_by_date]}%")
+            @results = @articles.where("created_at BETWEEN ? AND ?", parsed_date.beginning_of_day, parsed_date.end_of_day)
 
           end
     end
@@ -48,10 +46,13 @@ class ArticlesController < ApplicationController
     end
 
     def edit
+
         @article = Article.find(params[:id])
+
       end
     
       def update
+
         @article = Article.find(params[:id])
     
         if @article.update(article_params)

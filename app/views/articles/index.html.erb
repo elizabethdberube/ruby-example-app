@@ -1,5 +1,5 @@
 <div class="log">
-<h1 class="recent">Welcome <%= @user %>!</h1>
+<h1 class="recent">Welcome <%= @username %>!</h1>
 <hr>
 <br>
 <%= form_tag "articles/", method: "GET" do %>
@@ -14,11 +14,12 @@
 <% end %>
 
 <br>
+
 <% if @results %>
 <h3 class="recent">Search Results</h3>
  
 <ul>
-  <%= @results.each do |result| %>
+  <% @results.each do |result| %>
     <li>
 
      <%= link_to result.title,  article_path(result.id) %>
